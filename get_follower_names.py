@@ -4,10 +4,10 @@ import time
 lines_num = 500
 input_file_name = "followers_ids.txt"
 
-consumer_key = "2yoD9AScEFJWIVI6lc6Nmg"
-consumer_secret = "qf2Pi3qsHvA0RjomsnNRhY5iKDWHIVy9DQWGBzDQIkw"
-access_token = "41890375-lzLkRN8mby5403MusMFzK8VeVbuSyd2aVoejewZdd"
-access_token_secret = "BqXUHskZRV25p9Wl7iiRl5fURu8DDFq9nIEXQ3It8jxQT"
+consumer_key = "x"
+consumer_secret = "x"
+access_token = "x"
+access_token_secret = "x"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
