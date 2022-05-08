@@ -3,9 +3,10 @@ import time
 from shutil import copyfile
 from datetime import datetime
 import os
-from dotenv import load_dotenv
+from dotenv import Dotenv
+dotenv = Dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+os.environ.update(dotenv)
 
-load_dotenv()
 follow_count = 20
 
 # TODO: if you already in timeout

@@ -1,9 +1,9 @@
 import tweepy
 import time
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
+from dotenv import Dotenv
+dotenv = Dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+os.environ.update(dotenv)
 
 screen_name = "anonymicenft"
 

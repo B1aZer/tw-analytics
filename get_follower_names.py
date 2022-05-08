@@ -1,9 +1,10 @@
 import tweepy
 import time
 import os
-from dotenv import load_dotenv
+from dotenv import Dotenv
+dotenv = Dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+os.environ.update(dotenv)
 
-load_dotenv()
 lines_num = 500
 input_file_name = "followers_ids.txt"
 
