@@ -1,13 +1,16 @@
 import tweepy
 import time
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 lines_num = 500
 input_file_name = "followers_ids.txt"
 
-consumer_key = "x"
-consumer_secret = "x"
-access_token = "x"
-access_token_secret = "x"
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
+access_token = os.getenv('access_token')
+access_token_secret = os.getenv('access_token_secret')
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
