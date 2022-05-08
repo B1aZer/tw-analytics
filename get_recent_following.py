@@ -13,9 +13,6 @@ follow_count = 20
 #print('sleeping')
 #time.sleep(900)
 
-# copy following to prev
-copyfile("following.txt", "following_prev.txt")
-
 consumer_key = os.getenv('consumer_key')
 consumer_secret = os.getenv('consumer_secret')
 access_token = os.getenv('access_token')
@@ -34,6 +31,7 @@ with open('following.txt', 'w') as f:
     for influencer in influental_list:
         name = influencer.split(' ')[0]
         # find recent following
+        # import pdb; pdb.set_trace()
         following_ids = tweepy.Cursor(api.friends_ids, screen_name=name).items(follow_count)
         # write to file
         for f_id in following_ids:
@@ -61,4 +59,7 @@ with open('new_following_list.txt', 'w') as f:
         f.write(str(user.followers_count) + " | ")
         f.write("\r\n")
 
-copyfile("new_following_list.txt", "lists/new_following_list_%s_%s_%s.txt" % (datetime.now().strftime('%m'), datetime.now().strftime('%d'), datetime.now().strftime('%y')))
+copyfile("new_following_list.txt", "lists/following-lists/%s.txt" % (datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f%z')))
+
+# copy following to prev
+copyfile("following.txt", "following_prev.txt")
