@@ -19,7 +19,7 @@ auth.set_access_token(os.getenv('access_token'),
                       os.getenv('access_token_secret'))
 api = tweepy.API(auth)
 
-
+# TODO: require https://developer.twitter.com/en/docs/twitter-ads-api/apply
 auth2 = tweepy.OAuthHandler(os.getenv('api_key'), os.getenv('api_secret'))
 auth2.set_access_token(os.getenv('api_access_token'),
                        os.getenv('api_token_secret'))
