@@ -62,9 +62,9 @@ for fol_id in following_ids_new:
 # order by date created
 with open('new_following_list.txt', 'w') as f:
     for user in sorted(new_following, key=(lambda x: x.created_at), reverse=True):
-        f.write(user.screen_name + " | ")
-        f.write(str(user.created_at) + " | ")
-        f.write(str(user.followers_count) + " | ")
+        f.write(user.screen_name + " " + os.getenv('LOG_FILES_SEPARATOR') + " ")
+        f.write(str(user.created_at) + " " + os.getenv('LOG_FILES_SEPARATOR') + " ")
+        f.write(str(user.followers_count) + " " + os.getenv('LOG_FILES_SEPARATOR') + " ")
         f.write("\r\n")
 
 # copy to lists

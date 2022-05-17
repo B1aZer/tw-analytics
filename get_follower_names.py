@@ -26,9 +26,9 @@ f = open("followers_names.txt", "w")
 for line in reversed(open(input_file_name).readlines()[-lines_num:]):
     id = line.rstrip()
     user = api.get_user(id)
-    f.write(str(user.screen_name) + ' | ')
-    f.write(str(user.created_at) + ' | ')
-    f.write(str(user.followers_count) + ' | ')
+    f.write(str(user.screen_name) + ' ' + os.getenv('LOG_FILES_SEPARATOR') + ' ')
+    f.write(str(user.created_at) + ' ' + os.getenv('LOG_FILES_SEPARATOR') + ' ')
+    f.write(str(user.followers_count) + ' ' + os.getenv('LOG_FILES_SEPARATOR') + ' ')
     f.write("\b\r\n")
     print("writing %s" % id)
 
