@@ -1,3 +1,6 @@
 node_modules
 .env
 lists
+following_prev.txt
+following.txt
+new_following_list.txt
