@@ -4,6 +4,7 @@ Get trending NFT accounts from twitter.
 
 ### Start
 
+```
 workon tw_api
 
 To get list of all followers
@@ -20,3 +21,4 @@ To get recent followings from influential:
 2. follow_count - number of last followings per influenter
 3. python get_recent_following.py
 4. cp new_following_list lists/desired_name.txt
+```
